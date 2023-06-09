@@ -1,0 +1,4 @@
+<app-nav-exp [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-nav-exp>
+<div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
+  <p>typology works!</p>
+</div>
