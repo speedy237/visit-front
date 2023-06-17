@@ -39,13 +39,19 @@
                         <label class="form-label" for="town">Ville</label>
                       </div>
                       <div class="form-outline mb-4">
+                        <input  [(ngModel)]="exposant.phone"  type="tel"   id="phone" name="phone" class="form-control"
+                          />
+                        <label class="form-label" for="phone">Telephone</label>
+                      </div>  
+  
+                      <div class="form-outline mb-4">
                         <input  [(ngModel)]="exposant.email"  type="email"   id="email" name="email" class="form-control"
                           />
                         <label class="form-label" for="email">Email</label>
                       </div>  
   
                     <div class="form-outline mb-4">
-                      <input [(ngModel)]="exposant.password"  type="password" id="password" name="password" class="form-control"  />
+                      <input [(ngModel)]="exposant.paswword"  type="password" id="password" name="password" class="form-control"  />
                       <label class="form-label" for="password">Password</label>
                     </div>
                     <div class="form-outline mb-4">

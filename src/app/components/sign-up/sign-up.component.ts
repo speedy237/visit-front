@@ -18,14 +18,25 @@ export class SignUpComponent {
 
   constructor(private exposantService:ExposantService,private standService:StandService,private userService:UserService){}
 
-  create():void{
-    console.log(this.exposant);
-    this.exposantService.addExposant(this.exposant);
-    this.userService.authentification(this.user.email).subscribe(data=>{
-      this.user=data;
-      console.log(data);
-    })
-    this.standService.addStand(this.stand,this.user.id);
+    async create(){
+      console.log("debut ")
+      console.log(this.exposant);
+      await this.exposantService.addExposant(this.exposant);
+      console.log("get exposant")
+         this.userService.authentification(this.exposant.email,this.exposant.paswword).subscribe(data=>{
+         console.log("authentification");
+         this.user=data;
+         this.savedStand(data.id,this.stand);
+      })
+     
+  }
+
+  savedStand(id:number,stand:Stand){
+
+    console.log(this.stand);
+    console.log(this.stand);
+    this.standService.addStand(stand,id);
+
   }
 
 

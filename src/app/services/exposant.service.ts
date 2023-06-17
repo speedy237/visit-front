@@ -10,11 +10,23 @@ export class ExposantService {
 
   constructor(private http:HttpClient) { }
 
-  addExposant(exposant:Exposant):void{
-    let config=new HttpHeaders().set('Content-Type','application/json').set('Accept','application/json');
-    this.http.post<Exposant>("http://localhost:8080/exposants",JSON.stringify(exposant),{headers:config}).subscribe(data=>{
+   async addExposant(exposant:Exposant){
+
+    console.log("add exposant"); 
+    console.log(exposant.paswword);
+
+    try{
+      const data= await this.http.post("http://localhost:8080/exposants",exposant).toPromise() 
       console.log(data);
-    })
+
+    }
+    catch{
+      console.log("oula")
+
+    }
+   
 
   }
+
+  
 }

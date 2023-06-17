@@ -1,4 +1,27 @@
 <app-nav-exp [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-nav-exp>
 <div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
-  <p>typology works!</p>
+
+  <form class=" border border-light p-5">
+
+    <p class="h4 mb-4">Configure your stands</p>
+
+    <label for="typology" class="form-label text-left">Type of Element</label>
+
+    <select class=" form-control mb-4" id="typology" name="typology" placeholder="Typology" [(ngModel)]="this.standcell.typology">
+       <option selected class="text-left" >Selected an Element</option>
+       <option value="rollob" class="text-left" >Rolup </option>
+       <option value="kakemono" class="text-left">Kakemono</option>
+       <option  value="table" class="text-left" >table</option>
+       <option  value="chair" class="text-left" >chair</option>
+       <option  value="cell" class="text-left" >cell</option>
+    </select>
+    <label for="url" class="form-label text-left">Image of Element</label>
+
+    <input type="file" accept="image/*" id="url" name="url" class=" text-center form-control mb-4" placeholder="Seleced File of Element" (change)="onFileSelected($event) "  />
+    
+    <button class=" text-center btn  btn-block fa-lg gradient-custom-2 mb-3" type="button"  (click)="addElement()">Add</button>
+
+  </form>
+
 </div>
+ 

@@ -19,7 +19,7 @@ export class SignInComponent implements OnInit {
 
   public login():void{
 
-    this.userService.authentification(this.user.email).subscribe(data=>{
+    this.userService.authentification(this.user.email,this.user.password).subscribe(data=>{
       console.log(data);
       this.userL=data;
       if(this.userL.email==this.user.email && this.userL.password==this.user.password){
@@ -29,7 +29,9 @@ export class SignInComponent implements OnInit {
           
 
           if(data!=null){
-            this.router.navigateByUrl("/home-exposant");
+            let path="/home-exposant/"+this.userL.id;
+            console.log(path)
+            this.router.navigateByUrl(path);
           }
           
         })

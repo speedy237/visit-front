@@ -18,7 +18,7 @@
                   alt=""
                   loading="lazy"
                 />
-                <strong class="d-none d-sm-block ms-1">John</strong>
+                <strong class="d-none d-sm-block ms-1">{{this.user.name}}</strong>
                 </a>
             </div>
              
@@ -26,7 +26,7 @@
         </div> 
     
       <div class="link">
-        <div class="content" [routerLink]="['/home-exposant']" [routerLinkActive]="'active'">
+        <div class="content" [routerLink]="['/home-exposant',id]" [routerLinkActive]="'active'">
           <div class="icon">
             <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="link">
-        <div class="content" [routerLink]="['/typology']" [routerLinkActive]="'active'">
+        <div class="content" [routerLink]="['/typology',id]" [routerLinkActive]="'active'">
           <div class="icon">
             <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -71,7 +71,7 @@
  
       </div>
       <div class="link">
-        <div class="content" [routerLink]="['/statistic']" [routerLinkActive]="'active'">
+        <div class="content" [routerLink]="['/statistic',id]" [routerLinkActive]="'active'">
           <div class="icon">
             <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">

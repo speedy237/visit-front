@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class UserService {
 
   constructor(private http:HttpClient) { }
-  public authentification(email:string):Observable<any>{
-    return this.http.get("http://localhost:8080/api/user?email="+email);
+  public authentification(email:string,password:string):Observable<any>{
+    return this.http.get("http://localhost:8080/api/user?email="+email+"&password="+password);
   }
 
   public getExposant(id:number):Observable<any>{

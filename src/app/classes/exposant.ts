@@ -7,5 +7,5 @@ export class Exposant {
     public email!:string;
     public poBox!:string;
     public town!:string;
-    public password!:string;
+    public paswword!:string;
 }

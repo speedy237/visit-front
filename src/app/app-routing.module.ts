@@ -14,9 +14,9 @@ import { ChoiceComponent } from './components/choice/choice.component';
 const routes: Routes = [
   {path: 'sign-in', component: SignInComponent },
   {path: 'home-visitor',component: HomeVisitorComponent},
-  {path: 'home-exposant',component: HomeExposantComponent},
-  {path: 'statistic',component: StatisticComponent},
-  {path: 'typology',component: TypologyComponent},
+  {path: 'home-exposant/:id',component: HomeExposantComponent},
+  {path: 'statistic/:id',component: StatisticComponent},
+  {path: 'typology/:id',component: TypologyComponent},
   {path: 'home',component: HomeComponent},
   {path: 'sign-up-exposant',component: SignUpComponent},
   {path: 'sign-up-visitor',component: SignUpVisitorComponent},
